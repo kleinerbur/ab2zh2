@@ -1,3 +1,10 @@
+# Usage: 
+# python megelozesi_graf.py "R1(A); R3(B); R4(C); R1(B); R2(A); W2(A); W2(B); W3(C); R4(A); W4(D);" 
+
+# Minden lépés után megjelenik a konzolon az aktuális eredmény.
+# Gráf helyett listákkal vannak ábrázolva a nyilak.
+# Pl. [1] -> [2, 3] == 1-ből 2-be és 3-ba vezet nyíl
+
 from sys import argv
 
 class Operation:

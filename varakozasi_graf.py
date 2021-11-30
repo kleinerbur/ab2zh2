@@ -1,8 +1,15 @@
+# Usage: 
+# python varakozasi_graf.py "l1(B); l2(C); l3(D); l1(A); l2(B); l3(A); l4(C); u1(B); l2(D);" 
+
+# Minden lépés után megjelenik a konzolon az aktuális eredmény.
+# Gráf helyett listákkal vannak ábrázolva a nyilak.
+# Pl. [1] -> [2, 3] == 1-ből 2-be és 3-ba vezet nyíl
+
 from sys import argv
 
 class Operation:
     def __init__(self, op_str):
-        self.action = op_str[0].upper()            # [R]ead vagy [W]rite
+        self.action = op_str[0].upper()            # [L]ock vagy [U]nlock
         self.num    = op_str[1]                    # 1, 2, ...
         self.var    = op_str.split('(')[1].upper() # A, B, C, D, ...
     def __repr__(self):
